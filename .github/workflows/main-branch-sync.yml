@@ -12,8 +12,10 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Update branch
         run: |
-          git push https://${{ github.token }}@github.com/${{ github.repository }} master:main
+          git push https://${{ github.token }}@github.com/${{ github.repository }} HEAD:main
           
