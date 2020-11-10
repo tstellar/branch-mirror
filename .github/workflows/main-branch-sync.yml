@@ -15,6 +15,5 @@ jobs:
 
       - name: Update branch
         run: |
-          git fetch origin main
-          git push https://${{ github.token }}@github.com/${{ github.repository }} HEAD:main
+          git push https://${{ github.token }}@github.com/${{ github.repository }} master:main
           
